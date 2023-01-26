@@ -14,4 +14,4 @@ def most_popular_product(data: pd.DataFrame, year: int, quarter: int) -> str:
     data = filter_by_year_and_quarter(data, year, quarter)
 
     # Find the most popular product
-    return data['Description'].mode()
+    return data['Description'].mode()[0]
