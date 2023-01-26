@@ -14,4 +14,4 @@ def most_profitable_product(data: pd.DataFrame, year: int, quarter: int) -> str:
     data = filter_by_year_and_quarter(data, year, quarter)
     data['ProductTotalPriceSum'] = data.groupby('Description')['TotalPrice'].transform('sum')
     # Find the most profitable product
-    return return data[data.ProductTotalPriceSum == data.ProductTotalPriceSum.max()]['Description'].values[0]
+    return data[data.ProductTotalPriceSum == data.ProductTotalPriceSum.max()]['Description'].values[0]
